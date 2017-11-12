@@ -1,0 +1,19 @@
+{
+  "name": "dr1n/csgofastdb",
+  "description": "csgofast game history",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "dr1n",
+      "email": "dr1n@gmail.com"
+    }
+  ],
+  "require": {
+    "league/climate": "3.2.1",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "autoload": {
+    "psr-4": {"src\\": "src/"}
+  }
+}
