@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Statistic</title>
+	<script>var isServer = false</script>
+	<script><?php echo "isServer = true;"; ?></script>
+	<title>Fast Statistic</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-	<?php
-		echo "<h1>STAT</h1>"; 
-	?>
+	<div class="container hidden">
+		<div class="row">
+			<h1 class="text-center">STATISTIC:</h1>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		$(function() {
+			if (isServer === false) {
+				console.log("Запусти скрипт на сервере!");
+				$('body').html("Запусти скрипт на сервере!");
+			} else {
+				$('.container').removeClass("hidden");
+			}
+		});
+	</script>
 </body>
 </html>
